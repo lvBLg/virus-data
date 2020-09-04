@@ -46,6 +46,7 @@ export default {
 <style lang="scss" scoped>
     .home-title{
       position: relative;
+      padding: 0 15px;
     }
     h1{
         font-size: 14px;
@@ -59,7 +60,7 @@ export default {
       font-size: 10px;
       color: #999;
       position: absolute;
-      right: 0;
+      right: 15px;
       bottom: 0;
       svg{
         vertical-align: middle;

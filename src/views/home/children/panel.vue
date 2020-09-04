@@ -1,6 +1,6 @@
 <template>
     <div class="data-panel">
-      <panel-item title="现有确诊" :tdNum="tx.currentConfirmedCount" :color="'#ff6a57'" :rltv="tx.currentConfirmedIncr"></panel-item>
+      <panel-item title="现有确诊" :tdNum="yy.currentConfirmedCount" :color="'#ff6a57'" :rltv="yy.currentConfirmedAdd"></panel-item>
       <panel-item title="无症状" :tdNum="tx.seriousCount" :color="'#e86d48'" :rltv="tx.seriousIncr"></panel-item>
       <panel-item title="累计疑似" :tdNum="yy.suspectedCount" :color="'#ec9217'" :rltv="yy.suspectedAdd"></panel-item>
       <panel-item title="现有重症" :tdNum="yy.severecasesCount" :color="'#545499'" :rltv="yy.severecasesAdd"></panel-item>
@@ -20,13 +20,15 @@ export default {
   },
   data() {
     return {
-      yy: {},
-      tx: {}
+      yy: this.$store.state.yyData,
+      tx: this.$store.state.txData
     }
   },
   async created() {
     this.yy = this.$store.state.yyData
     this.tx = this.$store.state.txData
+    console.log(this.$store.state.txData)
+    console.log(this.$store.state.yyData)
   }
 }
 </script>

@@ -21,13 +21,13 @@ export default {
   },
   data() {
     return {
-      virusData: this.$store.state.yyData,
       show: false
     }
   },
   async created() {
     await this.$store.dispatch('getTxData')
     await this.$store.dispatch('getYyData')
+    await this.$store.dispatch('getMapData')
     this.show = true
   },
   methods: {
