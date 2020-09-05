@@ -15,7 +15,7 @@ export default {
   },
   computed: {
     rltvnum() {
-      return this.rltv > 0 ? '+' + this.rltv : this.rltv
+      return this.rltv ? (this.rltv > -1 ? '+' + this.rltv : this.rltv) : '+0'
     }
   }
 }

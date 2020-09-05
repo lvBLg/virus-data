@@ -23,12 +23,6 @@ export default {
       yy: this.$store.state.yyData,
       tx: this.$store.state.txData
     }
-  },
-  async created() {
-    this.yy = this.$store.state.yyData
-    this.tx = this.$store.state.txData
-    console.log(this.$store.state.txData)
-    console.log(this.$store.state.yyData)
   }
 }
 </script>

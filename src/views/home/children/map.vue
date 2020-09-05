@@ -136,7 +136,6 @@ export default {
 <style lang="scss" scoped>
 .map{
     background-color: #F8F9FA;
-    height: 500px;
     .tab{
       padding-top: 15px;
     }

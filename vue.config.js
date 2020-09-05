@@ -24,6 +24,14 @@ module.exports = {
         pathRewrite: {
           '^/apis': ''
         }
+      },
+      '/aliyun': {
+        target: 'https://ncovdata.market.alicloudapi.com/ncov/cityDiseaseInfoWithTrend',
+        ws: true,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/aliyun': ''
+        }
       }
     }
   },

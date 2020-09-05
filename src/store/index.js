@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { getVirusData, getHomeData, getMapData } from '@/http/api.js'
+import { getVirusData, getHomeData, getMapData, getAliData } from '@/http/api.js'
 
 Vue.use(Vuex)
 
@@ -9,7 +9,8 @@ export default new Vuex.Store({
     yyData: {},
     txData: {},
     currData: [],
-    totalData: []
+    totalData: [],
+    aliData: []
   },
   mutations: {
     setYyDataMutation(state, data) {
@@ -23,6 +24,9 @@ export default new Vuex.Store({
     },
     setTotalDataMutation(state, data) {
       state.totalData = data
+    },
+    setAliDataMutation(state, data) {
+      state.aliData = data
     }
   },
   actions: {
@@ -60,6 +64,14 @@ export default new Vuex.Store({
         commit('setCurrDataMutation', currArr)
         commit('setTotalDataMutation', totalArr)
         console.log('mapactions cplt')
+      }).catch(err => {
+        console.log(err)
+      })
+    },
+    async getAliData({ commit }) {
+      await getAliData().then(res => {
+        commit('setAliDataMutation', res.data)
+        console.log('yyactions cplt')
       }).catch(err => {
         console.log(err)
       })

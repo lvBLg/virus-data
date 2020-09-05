@@ -28,6 +28,7 @@ export default {
     await this.$store.dispatch('getTxData')
     await this.$store.dispatch('getYyData')
     await this.$store.dispatch('getMapData')
+    await this.$store.dispatch('getAliData')
     this.show = true
   },
   methods: {

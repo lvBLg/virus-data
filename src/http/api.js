@@ -10,3 +10,6 @@ export const getHomeData = () => axios.get('apis/dst/ncov/country', { headers: {
 
 // 分布地图-用友api
 export const getMapData = () => axios.get('apis/dst/ncov/spreadQuery', { headers: { apicode: 'e3b676f2f67641268c4dd6d9f0b2bfac' } })
+
+// 历史详情-阿里云api
+export const getAliData = () => axios.get('aliyun', { headers: { Authorization: 'APPCODE 72e7f0cd434e4aa991a2dc803eb367ee' } })

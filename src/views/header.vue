@@ -6,7 +6,7 @@
         <van-col span="12">
           <img class="logo" src="../assets/baidu-logo.png" alt="" />
         </van-col>
-        <van-col span="5" class="ctg-loc">
+        <van-col span="6" class="ctg-loc">
           <div>
             <van-button color="#BDEBED" round size="mini"
               >切换地区 <van-icon name="arrow-down"
@@ -58,6 +58,7 @@ export default {
   .van-button__content {
     color: #104345;
     font-size: 10px;
+    width: 80px;
   }
   .header-text {
     h2 {
@@ -83,7 +84,7 @@ export default {
       color: #fff;
       font-size: 10px;
       height: 20px;
-      width: 150px;
+      width: 200px;
       border-radius: 10px;
       text-align: center;
       line-height: 20px;

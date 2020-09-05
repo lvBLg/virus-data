@@ -3,6 +3,7 @@
         <home-title></home-title>
         <home-panel></home-panel>
         <home-map></home-map>
+        <home-cart></home-cart>
     </div>
 </template>
 
@@ -10,11 +11,13 @@
 import homeTitle from './children/title'
 import homePanel from './children/panel'
 import homeMap from './children/map'
+import homeCart from './children/cart'
 export default {
   components: {
     homeTitle,
     homePanel,
-    homeMap
+    homeMap,
+    homeCart
   },
   data() {
     return {
