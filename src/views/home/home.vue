@@ -4,6 +4,7 @@
         <home-panel></home-panel>
         <home-map></home-map>
         <home-cart></home-cart>
+        <home-list></home-list>
     </div>
 </template>
 
@@ -12,12 +13,14 @@ import homeTitle from './children/title'
 import homePanel from './children/panel'
 import homeMap from './children/map'
 import homeCart from './children/cart'
+import homeList from './children/list'
 export default {
   components: {
     homeTitle,
     homePanel,
     homeMap,
-    homeCart
+    homeCart,
+    homeList
   },
   data() {
     return {

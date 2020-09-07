@@ -71,7 +71,7 @@ export default new Vuex.Store({
     async getAliData({ commit }) {
       await getAliData().then(res => {
         commit('setAliDataMutation', res.data)
-        console.log('yyactions cplt')
+        console.log('aliactions cplt')
       }).catch(err => {
         console.log(err)
       })

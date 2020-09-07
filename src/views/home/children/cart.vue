@@ -169,7 +169,6 @@ export default {
 <style lang="scss" scoped>
 .carts{
     margin-top: 20px;
-    height: 500px;
     .custom-indicator {
         position: absolute;
         right: 50px;
