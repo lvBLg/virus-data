@@ -42,7 +42,7 @@ export default {
       if (this.showAll) {
         return foldArr
       } else {
-        for (let index = 0; index < foldArr.length / 2; index++) {
+        for (let index = 0; index < foldArr.length / 1.5; index++) {
           showList.push(foldArr[index])
         }
         return showList

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import { Col, Row, Button, Icon, Popup, Cell, Tab, Tabs, Swipe, SwipeItem, Sticky } from 'vant'
+import { Col, Row, Button, Icon, Popup, Cell, Tab, Tabs, Swipe, SwipeItem, Sticky, Overlay, TreeSelect } from 'vant'
 import './libs/rem.js'
 import axios from './http/http.js'
 import './icons'
@@ -22,6 +22,8 @@ Vue.use(Tabs)
 Vue.use(Swipe)
 Vue.use(SwipeItem)
 Vue.use(Sticky)
+Vue.use(Overlay)
+Vue.use(TreeSelect)
 
 Vue.use(HighchartsVue)
 stockInit(Highcharts)

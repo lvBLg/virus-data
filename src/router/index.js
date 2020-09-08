@@ -19,6 +19,10 @@ const routes = [
   {
     path: '/broadcast',
     component: () => import('@/views/broadcast/broadcast.vue')
+  },
+  {
+    path: '/city',
+    component: () => import('@/views/city/city.vue')
   }
 ]
 

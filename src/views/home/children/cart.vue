@@ -3,16 +3,24 @@
         <h1>国内疫情数据</h1>
         <van-swipe @change="onChange">
             <van-swipe-item>
+              <div class="container" >
                 <highcharts :options='options'></highcharts>
+              </div>
             </van-swipe-item>
             <van-swipe-item>
+              <div class="container">
                  <highcharts :options='spreadOptions'></highcharts>
+              </div>
             </van-swipe-item>
             <van-swipe-item>
+              <div class="container">
                 <highcharts :options='totalConfirmOptions'></highcharts>
+              </div>
             </van-swipe-item>
             <van-swipe-item>
+              <div class="container">
                 <highcharts :options='diedOptions'></highcharts>
+              </div>
             </van-swipe-item>
             <template #indicator>
                 <div class="custom-indicator">
@@ -182,6 +190,9 @@ export default {
       padding: 0 15px;
       font-size: 17px;
       margin-bottom: 10px;
+    }
+    .container{
+      width: 100vw;
     }
 }
 </style>

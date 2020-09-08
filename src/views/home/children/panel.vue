@@ -12,7 +12,6 @@
 </template>
 
 <script>
-// import { getHomeData, getVirusData } from '@/http/api.js'
 import panelItem from '@/components/home/panelItem.vue'
 export default {
   components: {
@@ -33,6 +32,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     .panel-item{
+      margin-bottom: 10px;
         width: 25%;
         text-align: center;
     }

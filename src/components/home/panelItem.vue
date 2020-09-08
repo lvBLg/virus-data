@@ -2,7 +2,7 @@
     <div class="panel-item">
         <p class="title">{{title}}</p>
         <p class="today" :style="{color: color}">{{tdNum}}</p>
-        <p class="relative" >昨日<span :style="{color: color}">{{rltvnum}}</span></p>
+        <p class="relative" v-if="rltv">昨日<span :style="{color: color}">{{rltvnum}}</span></p>
     </div>
 </template>
 

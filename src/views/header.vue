@@ -8,8 +8,7 @@
         </van-col>
         <van-col span="6" class="ctg-loc">
           <div>
-            <van-button color="#BDEBED" round size="mini"
-              >切换地区 <van-icon name="arrow-down"
+            <van-button color="#BDEBED" round size="mini" @click="showCityPanel">切换地区 <van-icon name="arrow-down"
             /></van-button>
           </div>
         </van-col>
@@ -20,14 +19,23 @@
       <h1>疫情实时大数据报告</h1>
       <p>共 {{ browseNum | numFormat}} 人次已浏览</p>
     </div>
+    <!-- 选择地区遮罩层 -->
+    <van-overlay :show="cityPanel" :lock-scroll="false">
+      <city-choice></city-choice>
+    </van-overlay>
   </div>
 </template>
 
 <script>
+import cityChoice from '@/components/common/cityChoice'
 export default {
+  components: {
+    cityChoice
+  },
   data() {
     return {
-      browseNum: 7831379880
+      browseNum: 7831379880,
+      cityPanel: false
     }
   },
   filters: {
@@ -36,6 +44,11 @@ export default {
       if (!value) return '0.00'
       const intPartFormat = value.toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,')
       return intPartFormat
+    }
+  },
+  methods: {
+    showCityPanel() {
+      this.cityPanel = true
     }
   }
 }
