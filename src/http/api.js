@@ -8,6 +8,9 @@ export const getVirusData = () => axios.get('tianxing/ncov/index', {
 // 全国疫情统计-用友api
 export const getHomeData = () => axios.get('apis/dst/ncov/country', { headers: { apicode: 'e3b676f2f67641268c4dd6d9f0b2bfac' } })
 
+// 疫情动态播报-用友api
+export const getNewsData = () => axios.get('apis/dst/ncov/query', { headers: { apicode: 'e3b676f2f67641268c4dd6d9f0b2bfac' } })
+
 // 全球疫情统计-用友api
 export const getAboardData = () => axios.get('apis/dst/ncov/wholeworld', { headers: { apicode: 'e3b676f2f67641268c4dd6d9f0b2bfac' } })
 
