@@ -49,9 +49,6 @@ export default {
       }
     }
   },
-  created () {
-    console.log(this.arr)
-  },
   filters: {
     province: function(value) {
       return value

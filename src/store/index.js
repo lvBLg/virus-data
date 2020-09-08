@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { getVirusData, getHomeData, getMapData, getAliData } from '@/http/api.js'
+import { getVirusData, getHomeData, getMapData, getAliData, getAboardData } from '@/http/api.js'
 
 Vue.use(Vuex)
 
@@ -10,7 +10,8 @@ export default new Vuex.Store({
     txData: {},
     currData: [],
     totalData: [],
-    aliData: []
+    aliData: [],
+    aboardData: []
   },
   mutations: {
     setYyDataMutation(state, data) {
@@ -27,6 +28,9 @@ export default new Vuex.Store({
     },
     setAliDataMutation(state, data) {
       state.aliData = data
+    },
+    setAboardMutation(state, data) {
+      state.aboardData = data
     }
   },
   actions: {
@@ -72,6 +76,14 @@ export default new Vuex.Store({
       await getAliData().then(res => {
         commit('setAliDataMutation', res.data)
         console.log('aliactions cplt')
+      }).catch(err => {
+        console.log(err)
+      })
+    },
+    async getAboardData({ commit }) {
+      await getAboardData().then(res => {
+        commit('setAboardMutation', res.data.data)
+        console.log('aboardactions cplt')
       }).catch(err => {
         console.log(err)
       })

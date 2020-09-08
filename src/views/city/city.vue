@@ -6,9 +6,9 @@
         </div>
         <div class="panel">
             <panel-item title="现有确诊" :tdNum="currConfirm" :color="'#ff6a57'" ></panel-item>
-            <panel-item title="累计确诊" :tdNum="totalConfirm" :color="'#ff6a57'" ></panel-item>
-            <panel-item title="累计治愈" :tdNum="totalCured" :color="'#ff6a57'"></panel-item>
-            <panel-item title="累计死亡" :tdNum="totalDeath" :color="'#ff6a57'"></panel-item>
+            <panel-item title="累计确诊" :tdNum="totalConfirm" :color="'#e83132'" ></panel-item>
+            <panel-item title="累计治愈" :tdNum="totalCured" :color="'#10aeb5'"></panel-item>
+            <panel-item title="累计死亡" :tdNum="totalDeath" :color="'#4d5054'"></panel-item>
         </div>
     </div>
 </template>
