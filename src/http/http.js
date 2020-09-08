@@ -2,6 +2,7 @@
  * ajax请求配置
  */
 import axios from 'axios'
+import store from '../store'
 // import apiURL from './api.js'
 // import Qs from 'qs'
 
@@ -32,7 +33,7 @@ axios.interceptors.request.use(
     //   config.headers.token = cookie.get('token')
     //   config.headers.name = cookie.get('name')
     // }
-
+    store.commit('showLoading')
     return config
   },
   error => {
@@ -51,6 +52,7 @@ axios.interceptors.response.use(
     } else if (response.data.resultCode === '302') {
       console.log(111)
     } else {
+      store.commit('hideLoading')
       return response
     }
   },

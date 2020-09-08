@@ -11,7 +11,8 @@ export default new Vuex.Store({
     currData: [],
     totalData: [],
     aliData: [],
-    aboardData: []
+    aboardData: [],
+    LOADING: false
   },
   mutations: {
     setYyDataMutation(state, data) {
@@ -31,6 +32,12 @@ export default new Vuex.Store({
     },
     setAboardMutation(state, data) {
       state.aboardData = data
+    },
+    showLoading(state) {
+      state.LOADING = true
+    },
+    hideLoading(state) {
+      state.LOADING = false
     }
   },
   actions: {

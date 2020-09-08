@@ -6,23 +6,31 @@
     <page-navbar></page-navbar>
     <!-- content -->
     <keep-alive>
-      <router-view v-if="show"></router-view>
+      <router-view v-if="show && !LOADING"></router-view>
     </keep-alive>
+    <!-- loading -->
+    <loading v-show="LOADING"></loading>
   </div>
 </template>
 
 <script>
 import pageHeader from './views/header'
 import pageNavbar from './views/navbar'
+import loading from '@/components/common/loading.vue'
+import { mapState } from 'vuex'
 export default {
   components: {
     pageHeader,
-    pageNavbar
+    pageNavbar,
+    loading
   },
   data() {
     return {
       show: false
     }
+  },
+  computed: {
+    ...mapState(['LOADING'])
   },
   async created() {
     await this.$store.dispatch('getTxData')
